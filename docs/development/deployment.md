@@ -257,7 +257,7 @@ Name: www
 Value: cname.vercel-dns.com
 ```
 
-**Propagation:** 5 minutes - 48 hours (usually <1 hour)
+**Propagation:** 5 minutes - 48 hours (usually &lt;1 hour)
 
 ---
 
@@ -369,9 +369,9 @@ MONGODB_URI=mongodb+srv://staging-cluster...
 - Web Vitals (LCP, FID, CLS)
 
 **Goals:**
-- LCP <2.5s
-- FID <100ms
-- CLS <0.1
+- LCP &lt;2.5s
+- FID &lt;100ms
+- CLS &lt;0.1
 
 ---
 

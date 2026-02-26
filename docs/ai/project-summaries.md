@@ -580,7 +580,7 @@ const transcript = await extractYouTubeTranscript(project.videoUrl);
 
 **Check:**
 1. Project status = "submitted"?
-2. Time since submission (<5 min = still generating)
+2. Time since submission (&lt;5 min = still generating)
 3. OpenAI API key configured?
 4. Check logs for errors
 
