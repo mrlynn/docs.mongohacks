@@ -550,7 +550,7 @@ return NextResponse.json({ success: true, project });
 ```
 
 **Benefits:**
-- Fast response times (<500ms)
+- Fast response times (&lt;500ms)
 - AI failures don't break UX
 - Retries possible
 - Can queue/batch operations

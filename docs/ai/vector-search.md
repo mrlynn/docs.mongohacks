@@ -470,7 +470,7 @@ const results = await TeamModel.aggregate([
 ```
 
 **Performance:**
-- Search time: 20-50ms (M10), <10ms (M30+)
+- Search time: 20-50ms (M10), &lt;10ms (M30+)
 - Scales to millions of vectors
 - No impact on regular queries
 
@@ -489,7 +489,7 @@ const results = await TeamModel.aggregate([
 
 **Metrics to track:**
 - Queries per day
-- P95 latency (<100ms good)
+- P95 latency (&lt;100ms good)
 - Index size vs collection size
 - Error rate (should be 0%)
 
@@ -597,7 +597,7 @@ $vectorSearch: {
 
 ### Low Match Scores
 
-**Problem:** All teams show <30% match scores
+**Problem:** All teams show &lt;30% match scores
 
 **Causes:**
 1. Skills too generic ("Software Development", "Coding")
