@@ -407,7 +407,7 @@ if (navigator.share) {
 ```
 
 **Metrics:**
-- Copy action: <1 second
+- Copy action: &lt;1 second
 - Share dialog: Native OS picker (Instagram, WhatsApp, etc.)
 
 ---
@@ -562,9 +562,9 @@ interface YourTeamSectionProps {
 - Skeleton screens for dynamic content
 
 **Metrics:**
-- Time to first byte: <100ms
-- First contentful paint: <500ms
-- Time to interactive: <1000ms
+- Time to first byte: &lt;100ms
+- First contentful paint: &lt;500ms
+- Time to interactive: &lt;1000ms
 
 ### Caching
 

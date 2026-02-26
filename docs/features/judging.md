@@ -579,4 +579,4 @@ db.judgeassignments.find({ judgeId: userId, eventId: eventId })
 
 - [Assign judges to projects](/docs/admin/judges)
 - [Generate AI feedback](/docs/ai/feedback-synthesis)
-- [Publish results](/docs/admin/events#publish-results)
+- [Publish results](/docs/features/results)
