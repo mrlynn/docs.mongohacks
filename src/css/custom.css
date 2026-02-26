@@ -1,30 +1,423 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * MongoHacks Documentation - MongoDB Brand Theme
+ * Matches hackathon-platform theme from src/styles/theme.ts
  */
 
-/* You can override the default Infima variables here. */
+/* MongoDB Brand Colors */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* Primary MongoDB Brand Colors */
+  --mongo-spring-green: #00ED64;
+  --mongo-forest-green: #00684A;
+  --mongo-evergreen: #023430;
+  --mongo-slate-blue: #001E2B;
+  --mongo-mist: #E3FCF7;
+  --mongo-white: #FFFFFF;
+  
+  /* Secondary/Accent Colors */
+  --mongo-blue: #006EFF;
+  --mongo-purple: #B45AF2;
+  --mongo-warning-yellow: #FFC010;
+  --mongo-error-red: #CF4520;
+  
+  /* Docusaurus Primary Palette (Light Mode) */
+  --ifm-color-primary: var(--mongo-forest-green);
+  --ifm-color-primary-dark: var(--mongo-evergreen);
+  --ifm-color-primary-darker: #012824;
+  --ifm-color-primary-darkest: #011E1B;
+  --ifm-color-primary-light: #008C5F;
+  --ifm-color-primary-lighter: #00A56E;
+  --ifm-color-primary-lightest: var(--mongo-spring-green);
+  
+  /* Background & Surface Colors */
+  --ifm-background-color: var(--mongo-white);
+  --ifm-navbar-background-color: var(--mongo-white);
+  --ifm-footer-background-color: var(--mongo-slate-blue);
+  
+  /* Typography */
+  --ifm-font-family-base: 'Lexend Deca', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --ifm-heading-font-family: 'Source Serif Pro', Georgia, serif;
+  --ifm-font-color-base: var(--mongo-slate-blue);
+  --ifm-heading-color: var(--mongo-slate-blue);
+  
+  /* Code Font */
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-family-monospace: 'Source Code Pro', SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  
+  /* Syntax Highlighting */
+  --docusaurus-highlighted-code-line-bg: rgba(0, 237, 100, 0.1);
+  
+  /* Links */
+  --ifm-link-color: var(--mongo-forest-green);
+  --ifm-link-hover-color: var(--mongo-evergreen);
+  
+  /* Navbar */
+  --ifm-navbar-height: 64px;
+  --ifm-navbar-link-hover-color: var(--mongo-forest-green);
+  
+  /* Border Radius */
+  --ifm-button-border-radius: 8px;
+  --ifm-card-border-radius: 12px;
+  --ifm-code-border-radius: 6px;
+  
+  /* Shadows */
+  --ifm-global-shadow-lw: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.04);
+  --ifm-global-shadow-md: 0 2px 8px rgba(0, 0, 0, 0.12);
+  --ifm-global-shadow-tl: 0 4px 16px rgba(0, 0, 0, 0.16);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Dark Mode - MongoDB Brand */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  /* Primary Palette (Dark Mode) */
+  --ifm-color-primary: var(--mongo-spring-green);
+  --ifm-color-primary-dark: #00D459;
+  --ifm-color-primary-darker: #00C853;
+  --ifm-color-primary-darkest: #00A545;
+  --ifm-color-primary-light: #33F07F;
+  --ifm-color-primary-lighter: #4DF391;
+  --ifm-color-primary-lightest: #66F5A3;
+  
+  /* Background & Surface Colors */
+  --ifm-background-color: var(--mongo-slate-blue);
+  --ifm-background-surface-color: #0F2235;
+  --ifm-navbar-background-color: var(--mongo-slate-blue);
+  --ifm-footer-background-color: #000C14;
+  
+  /* Typography */
+  --ifm-font-color-base: #E8EDEB;
+  --ifm-heading-color: #FFFFFF;
+  
+  /* Code Highlighting */
+  --docusaurus-highlighted-code-line-bg: rgba(0, 237, 100, 0.15);
+  
+  /* Links */
+  --ifm-link-color: var(--mongo-spring-green);
+  --ifm-link-hover-color: #33F07F;
+  
+  /* Navbar */
+  --ifm-navbar-link-hover-color: var(--mongo-spring-green);
+  
+  /* Cards & Surfaces */
+  --ifm-card-background-color: #0F2235;
+}
+
+/* Custom Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Navbar Customization */
+.navbar {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 30, 43, 0.08);
+}
+
+[data-theme='dark'] .navbar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navbar__brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.navbar__link {
+  font-weight: 500;
+}
+
+.navbar__link--active {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+/* Sidebar Customization */
+.theme-doc-sidebar-container {
+  border-right: 1px solid var(--ifm-toc-border-color);
+}
+
+.menu__link {
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.menu__link--active {
+  background-color: rgba(0, 237, 100, 0.1);
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+[data-theme='dark'] .menu__link--active {
+  background-color: rgba(0, 237, 100, 0.15);
+}
+
+.menu__link:hover {
+  background-color: rgba(0, 104, 74, 0.08);
+}
+
+[data-theme='dark'] .menu__link:hover {
+  background-color: rgba(0, 237, 100, 0.1);
+}
+
+/* Content Customization */
+.markdown h1:first-child {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--ifm-color-primary);
+  padding-bottom: 0.5rem;
+}
+
+.markdown h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+  padding-bottom: 0.5rem;
+}
+
+.markdown h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Code Blocks */
+.prism-code {
+  border-radius: var(--ifm-code-border-radius);
+  font-size: 0.9rem;
+}
+
+code {
+  background-color: rgba(0, 104, 74, 0.1);
+  color: var(--mongo-forest-green);
+  border-radius: 4px;
+  padding: 0.2rem 0.4rem;
+  font-weight: 500;
+}
+
+[data-theme='dark'] code {
+  background-color: rgba(0, 237, 100, 0.15);
+  color: var(--mongo-spring-green);
+}
+
+/* Admonitions (Alerts) */
+.alert {
+  border-left: 4px solid;
+  border-radius: 8px;
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.alert--success {
+  border-left-color: var(--mongo-spring-green);
+  background-color: rgba(0, 237, 100, 0.08);
+}
+
+.alert--info {
+  border-left-color: var(--mongo-blue);
+  background-color: rgba(0, 110, 255, 0.08);
+}
+
+.alert--warning {
+  border-left-color: var(--mongo-warning-yellow);
+  background-color: rgba(255, 192, 16, 0.08);
+}
+
+.alert--danger {
+  border-left-color: var(--mongo-error-red);
+  background-color: rgba(207, 69, 32, 0.08);
+}
+
+/* Tables */
+table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+thead tr {
+  background-color: rgba(0, 104, 74, 0.08);
+}
+
+[data-theme='dark'] thead tr {
+  background-color: rgba(0, 237, 100, 0.1);
+}
+
+thead th {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  color: var(--mongo-forest-green);
+  border-bottom: 2px solid var(--ifm-color-primary);
+}
+
+[data-theme='dark'] thead th {
+  color: var(--mongo-spring-green);
+}
+
+tbody tr:hover {
+  background-color: rgba(0, 104, 74, 0.04);
+}
+
+[data-theme='dark'] tbody tr:hover {
+  background-color: rgba(0, 237, 100, 0.05);
+}
+
+/* Buttons */
+.button {
+  border-radius: var(--ifm-button-border-radius);
+  font-weight: 500;
+  text-transform: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.button--primary {
+  background-color: var(--mongo-forest-green);
+  border-color: var(--mongo-forest-green);
+}
+
+.button--primary:hover {
+  background-color: var(--mongo-evergreen);
+  border-color: var(--mongo-evergreen);
+  box-shadow: 0 2px 8px rgba(0, 104, 74, 0.3);
+}
+
+[data-theme='dark'] .button--primary {
+  background-color: var(--mongo-spring-green);
+  border-color: var(--mongo-spring-green);
+  color: var(--mongo-slate-blue);
+}
+
+[data-theme='dark'] .button--primary:hover {
+  background-color: #33F07F;
+  border-color: #33F07F;
+  box-shadow: 0 2px 8px rgba(0, 237, 100, 0.3);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--ifm-footer-background-color);
+  color: #E8EDEB;
+  padding: 2rem 0;
+}
+
+.footer__title {
+  color: var(--mongo-spring-green);
+  font-weight: 600;
+}
+
+.footer__link-item {
+  color: #E8EDEB;
+}
+
+.footer__link-item:hover {
+  color: var(--mongo-spring-green);
+}
+
+.footer__copyright {
+  color: rgba(232, 237, 235, 0.7);
+}
+
+/* Cards */
+.card {
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-global-shadow-lw);
+  border: 1px solid var(--ifm-toc-border-color);
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: var(--ifm-global-shadow-md);
+  transform: translateY(-2px);
+}
+
+/* Badges */
+.badge {
+  border-radius: 6px;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+}
+
+.badge--primary {
+  background-color: var(--mongo-forest-green);
+  color: white;
+}
+
+[data-theme='dark'] .badge--primary {
+  background-color: rgba(0, 237, 100, 0.15);
+  color: var(--mongo-spring-green);
+}
+
+/* Pagination */
+.pagination-nav__link {
+  border-radius: 8px;
+  border: 1px solid var(--ifm-toc-border-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.pagination-nav__link:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.pagination-nav__label {
+  font-weight: 600;
+}
+
+/* Search Bar */
+.navbar__search-input {
+  border-radius: 8px;
+  background-color: rgba(0, 104, 74, 0.05);
+  border: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar__search-input:focus {
+  background-color: white;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 104, 74, 0.1);
+}
+
+[data-theme='dark'] .navbar__search-input {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme='dark'] .navbar__search-input:focus {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: var(--mongo-spring-green);
+  box-shadow: 0 0 0 3px rgba(0, 237, 100, 0.1);
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ifm-background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ifm-color-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ifm-color-primary-dark);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 996px) {
+  .markdown h1:first-child {
+    font-size: 2rem;
+  }
+  
+  .markdown h2 {
+    font-size: 1.5rem;
+  }
+  
+  .markdown h3 {
+    font-size: 1.25rem;
+  }
 }
