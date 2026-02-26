@@ -29,7 +29,7 @@ Registration is the entry point for participants. The system handles:
 5. Auto-login
 6. Redirect to Event Hub
 
-**Total time:** 2-3 minutes for new users, <30 seconds for returning users
+**Total time:** 2-3 minutes for new users, &lt;30 seconds for returning users
 
 ---
 
@@ -75,7 +75,7 @@ Registration is the entry point for participants. The system handles:
 - Professional networking events
 
 **When to skip:**
-- Small events (<50 people)
+- Small events (&lt;50 people)
 - Student-only hackathons
 - Time-constrained events
 - Simple registrations preferred
@@ -510,9 +510,9 @@ const handleSubmit = async (e) => {
 
 **Goals:**
 - 70%+ conversion from landing page
-- <5% form abandonment
-- <2 minutes average completion time
-- <20% mobile registrations (forms easier on desktop)
+- &lt;5% form abandonment
+- &lt;2 minutes average completion time
+- &lt;20% mobile registrations (forms easier on desktop)
 
 ---
 

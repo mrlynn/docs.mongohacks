@@ -124,7 +124,7 @@ All team members can:
 87% match = High compatibility
 65% match = Good compatibility  
 40% match = Some overlap
-<30% match = Low compatibility
+&lt;30% match = Low compatibility
 ```
 
 **Match reasons displayed:**
@@ -527,7 +527,7 @@ db.teams.findOne({ _id: teamId }, {
 **Goals:**
 - 70%+ participants on teams
 - Average team size: 3-4
-- <10% abandoned teams
+- &lt;10% abandoned teams
 
 ---
 

@@ -327,7 +327,7 @@ https://bitbucket.org/user/repo
 **Requirements:**
 - Must be publicly accessible
 - Should work without login (or demo account)
-- Fast loading (<3 seconds)
+- Fast loading (&lt;3 seconds)
 - Mobile-responsive
 
 **Demo tips:**
@@ -548,7 +548,7 @@ POST /api/events/:eventId/projects/:projectId
 **Goals:**
 - 70%+ submission rate
 - Average 5+ technologies per project
-- <10% submitted in last hour (procrastination)
+- &lt;10% submitted in last hour (procrastination)
 
 ---
 

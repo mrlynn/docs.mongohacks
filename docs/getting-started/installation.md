@@ -154,7 +154,7 @@ See [Deployment Guide](/docs/development/deployment) for:
 
 - [Configure your first event](/docs/getting-started/first-event)
 - [Set up Atlas Vector Search indexes](/docs/ai/vector-search)
-- [Configure email notifications](/docs/admin/configuration)
+- [Configure email notifications](/docs/getting-started/configuration)
 
 ## Troubleshooting
 

@@ -91,11 +91,11 @@ const config: Config = {
             },
             {
               label: 'Installation',
-              to: '/docs/installation',
+              to: '/docs/getting-started/installation',
             },
             {
               label: 'Configuration',
-              to: '/docs/configuration',
+              to: '/docs/getting-started/configuration',
             },
           ],
         },
@@ -104,11 +104,11 @@ const config: Config = {
           items: [
             {
               label: 'Event Management',
-              to: '/docs/features/events',
+              to: '/docs/features/event-management',
             },
             {
               label: 'AI Features',
-              to: '/docs/features/ai',
+              to: '/docs/ai/overview',
             },
             {
               label: 'Judging System',
