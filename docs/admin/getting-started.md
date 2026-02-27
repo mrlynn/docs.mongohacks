@@ -368,10 +368,9 @@ Enable AI-powered features for enhanced event management:
 Now that you've created your first event, explore these advanced features:
 
 - [Partner Management](/docs/admin/partners) - Add sponsors and showcase their brands
-- [Custom Branding](/docs/admin/branding) - Customize event pages with your theme
-- [Email Templates](/docs/admin/emails) - Create custom automated emails
-- [Webhooks](/docs/admin/webhooks) - Integrate with external tools
 - [Analytics Dashboard](/docs/admin/analytics) - Deep-dive into event metrics
+- [User Management](/docs/admin/users) - Manage participant roles and permissions
+- Custom branding, email templates, and webhooks - Coming soon!
 
 ---
 
