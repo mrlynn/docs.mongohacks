@@ -40,6 +40,7 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Administration',
       items: [
+        'admin/getting-started',
         'admin/dashboard',
         'admin/users',
         'admin/events',
