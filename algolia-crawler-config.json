@@ -1,0 +1,101 @@
+{
+  "index_name": "mongohacks-docs",
+  "start_urls": [
+    {
+      "url": "https://docs.mongohacks.com/docs/",
+      "tags": ["docs"],
+      "selectors_key": "docs",
+      "page_rank": 10
+    },
+    {
+      "url": "https://docs.mongohacks.com/docs/admin/",
+      "tags": ["docs", "admin"],
+      "selectors_key": "docs",
+      "page_rank": 15
+    },
+    {
+      "url": "https://docs.mongohacks.com/docs/getting-started/",
+      "tags": ["docs", "getting-started"],
+      "selectors_key": "docs",
+      "page_rank": 14
+    },
+    {
+      "url": "https://docs.mongohacks.com/docs/features/",
+      "tags": ["docs", "features"],
+      "selectors_key": "docs",
+      "page_rank": 12
+    },
+    {
+      "url": "https://docs.mongohacks.com/docs/ai/",
+      "tags": ["docs", "ai"],
+      "selectors_key": "docs",
+      "page_rank": 11
+    },
+    {
+      "url": "https://docs.mongohacks.com/docs/api/",
+      "tags": ["api"],
+      "selectors_key": "api",
+      "page_rank": 3
+    }
+  ],
+  "sitemap_urls": ["https://docs.mongohacks.com/sitemap.xml"],
+  "stop_urls": ["/tests"],
+  "selectors": {
+    "docs": {
+      "lvl0": {
+        "selector": ".menu__link--sublist.menu__link--active",
+        "global": true,
+        "default_value": "Documentation"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5",
+      "text": "article p, article li, article td"
+    },
+    "api": {
+      "lvl0": {
+        "selector": ".menu__link--sublist.menu__link--active",
+        "global": true,
+        "default_value": "API Reference"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "text": "article p, article li, article code"
+    }
+  },
+  "custom_settings": {
+    "attributesForFaceting": [
+      "language",
+      "version",
+      "type",
+      "docusaurus_tag"
+    ],
+    "attributesToRetrieve": [
+      "hierarchy",
+      "content",
+      "anchor",
+      "url",
+      "url_without_anchor",
+      "type"
+    ],
+    "customRanking": [
+      "desc(page_rank)",
+      "desc(weight.page_rank)",
+      "asc(weight.level)",
+      "desc(weight.position)"
+    ],
+    "searchableAttributes": [
+      "unordered(hierarchy.lvl0)",
+      "unordered(hierarchy.lvl1)",
+      "unordered(hierarchy.lvl2)",
+      "unordered(hierarchy.lvl3)",
+      "unordered(hierarchy.lvl4)",
+      "unordered(hierarchy.lvl5)",
+      "content"
+    ]
+  }
+}

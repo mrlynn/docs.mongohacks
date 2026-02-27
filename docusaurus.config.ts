@@ -52,6 +52,31 @@ const config: Config = {
     colorMode: {
       respectPrefersColorScheme: true,
     },
+    algolia: {
+      // Algolia DocSearch configuration
+      appId: 'YOUR_APP_ID', // Replace with actual Algolia app ID
+      apiKey: 'YOUR_SEARCH_API_KEY', // Public search-only API key
+      indexName: 'mongohacks-docs',
+      
+      // Custom search parameters for prioritization
+      searchParameters: {
+        facetFilters: [],
+        // Custom ranking to prioritize UI docs over API docs
+        optionalFilters: [
+          'docusaurus_tag:docs<score=10>', // Boost main docs
+          'docusaurus_tag:admin<score=15>', // Boost admin guides highest
+          'docusaurus_tag:features<score=12>', // Boost feature docs
+          'docusaurus_tag:getting-started<score=14>', // Boost getting started
+          'docusaurus_tag:ai<score=11>', // Boost AI feature docs
+          'docusaurus_tag:api<score=3>', // Lower API docs unless explicitly searched
+        ],
+      },
+      
+      // Context search - only search API docs when "api" is in query
+      contextualSearch: true,
+      searchPagePath: 'search',
+      insights: true,
+    },
     navbar: {
       title: 'MongoHacks',
       logo: {
