@@ -18,6 +18,8 @@ The admin dashboard provides a comprehensive view of event health, participant e
 
 ## Dashboard Layout
 
+![Admin Dashboard overview showing key metrics and quick actions](/img/screenshots/admin-dashboard.png)
+
 ### At-a-Glance Metrics
 
 **Four key metrics (top cards):**
@@ -119,6 +121,22 @@ The admin dashboard provides a comprehensive view of event health, participant e
 ❌ Critical: MongoDB connection slow (>500ms)
    Action: Upgrade cluster tier
 ```
+
+---
+
+### Atlas Cluster Management
+
+The Atlas Clusters page lets you monitor and manage all provisioned MongoDB Atlas clusters across events, including automated cleanup.
+
+![Atlas Cluster Management page showing cluster overview, status, and cleanup controls](/img/screenshots/admin-atlas-management.png)
+
+---
+
+### RAG Knowledge Base
+
+The RAG / Chat admin page shows the status of the documentation knowledge base, recent ingestion runs, and indexed files used by the AI assistant.
+
+![RAG Knowledge Base dashboard showing ingestion status, document count, and indexed files](/img/screenshots/admin-rag-summary.png)
 
 ---
 
@@ -414,6 +432,14 @@ Timeline:
 ---
 
 ## Customization
+
+### Settings & Templates
+
+The Settings page provides access to landing page templates, registration forms, feedback forms, and platform configuration.
+
+![Settings page showing template, registration form, and feedback form cards](/img/screenshots/admin-template-cards.png)
+
+---
 
 ### Dashboard Widgets
 

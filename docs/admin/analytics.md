@@ -18,6 +18,8 @@ Analytics provide deep insights into event performance, participant engagement, 
 
 ## Dashboard Overview
 
+![Platform Analytics dashboard with KPI cards and tabbed analytics views](/img/screenshots/SCR-20260228-hzlg.png)
+
 ### Key Metrics
 
 **Top-level KPIs:**
@@ -64,6 +66,10 @@ Analytics provide deep insights into event performance, participant engagement, 
 ---
 
 ## Event Analytics
+
+The Events analytics tab shows event lifecycle status, format distribution, team formation, capacity utilization, and geographic breakdown.
+
+![Event analytics showing status, format, and team donut charts with capacity and country tables](/img/screenshots/admin-events.png)
 
 ### Registration Funnel
 
@@ -194,6 +200,10 @@ High-quality markers (top 10%):
 ---
 
 ## Judging Analytics
+
+The Judging analytics tab shows score averages across criteria (radar chart), score distribution, and a summary of average scores.
+
+![Judging analytics with radar chart for score averages and bar chart for score distribution](/img/screenshots/admin-judging.png)
 
 ### Judge Performance
 
@@ -332,6 +342,10 @@ Tech stack trends:
 
 ## Technology Insights
 
+The Projects analytics tab shows project status pipeline, category distribution, submission trends, top technologies, and team size distribution.
+
+![Project analytics with status, category, and technology charts](/img/screenshots/admin-projects.png)
+
 ### Tech Stack Analysis
 
 **Most used technologies (projects):**
@@ -366,6 +380,10 @@ React Native + MongoDB + Node:        32 projects
 ---
 
 ## AI Feature Usage
+
+The AI Usage analytics tab tracks all AI API calls across providers (OpenAI and Voyage AI), showing calls by category, model distribution, daily usage, cost trends, and token consumption.
+
+![AI Usage analytics showing calls by category, model distribution donut chart, and daily trends](/img/screenshots/admin-ai-usage.png)
 
 ### AI Metrics
 
@@ -449,6 +467,10 @@ Avg: $30-40 per 500-person event
 
 ## Financial Analytics
 
+The Partners analytics tab shows sponsorship tier distribution, partner status, engagement levels, industry breakdown, and prize pool categories.
+
+![Partner analytics with tier, status, and engagement donut charts plus industry and prize breakdowns](/img/screenshots/admin-partners.png)
+
 ### Revenue & Costs
 
 **Event budget overview:**
@@ -502,6 +524,10 @@ Verdict: Strong value, likely to renew
 ---
 
 ## Participant Feedback
+
+The Feedback analytics tab shows response rates, NPS scores, response trends over time, and average ratings by question.
+
+![Feedback analytics showing NPS distribution, response trends, and rating breakdowns](/img/screenshots/admin-feedback.png)
 
 ### Post-Event Survey
 

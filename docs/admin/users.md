@@ -50,6 +50,8 @@ interface User {
 
 ## User List
 
+![Users Management table showing user names, emails, roles, join dates, and action controls](/img/screenshots/admin-users-table.png)
+
 ### All Users Table
 
 **Filterable list:**

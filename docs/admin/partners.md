@@ -118,6 +118,18 @@ interface Partner {
 
 ---
 
+## Partner Directory
+
+Partners are displayed as cards with their tier, status, engagement level, industry, contact, and event/prize counts. Filter by tier or status.
+
+![Partners card view showing partner details, tiers, industries, and engagement levels](/img/screenshots/admin-partner-tiles.png)
+
+Click the edit icon on any partner card to update their details:
+
+![Edit Partner dialog with fields for name, description, logo, website, industry, tier, and status](/img/screenshots/admin-partner-edit.png)
+
+---
+
 ## Adding Partners
 
 ### Partner Creation Form

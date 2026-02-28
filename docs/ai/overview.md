@@ -22,7 +22,35 @@ Traditional hackathon judging is time-consuming and repetitive:
 
 ## Features
 
-### 1. Project Summaries for Judges
+### 1. Project Suggestions Wizard
+
+**What it does:** A multi-step wizard that generates personalized hackathon project ideas based on team skills, technology preferences, sponsor products, and event context.
+
+**How it works:**
+1. Participant answers questions about team composition, tech preferences, and goals
+2. Context-rich prompt sent to OpenAI GPT-4o
+3. AI generates 3 unique project ideas with full tech stacks, timelines, and implementation guides
+4. Participants can save, refine, share, and vote on ideas with teammates
+
+**Example:**
+
+> **Inputs:** Team of 3 (intermediate, full-stack), React + Python + MongoDB Atlas, 24-hour hackathon, interested in Healthcare
+>
+> **AI Suggestion:** "MedTrack — A patient medication tracking app using MongoDB Atlas for real-time data sync, React Native for mobile, and OpenAI for drug interaction warnings. Estimated 24-hour timeline with setup, core features, and polish phases."
+
+**Key features:**
+- Refine ideas with natural language ("make it simpler", "add more AI")
+- Share ideas with teammates via link
+- Team voting to reach consensus
+- Rate limited to 5 generations per user per event
+
+**Cost:** ~$0.05 per generation (3 ideas)
+
+[Learn more about the Project Suggestions Wizard →](/docs/ai/project-suggestions-wizard)
+
+---
+
+### 2. Project Summaries for Judges
 
 **What it does:** Automatically generates a 2-3 sentence project summary when a team submits their project.
 
@@ -46,7 +74,7 @@ Traditional hackathon judging is time-consuming and repetitive:
 
 ---
 
-### 2. Feedback Synthesis
+### 3. Feedback Synthesis
 
 **What it does:** Combines judge scores and comments into coherent, constructive feedback paragraphs.
 
@@ -76,7 +104,7 @@ Traditional hackathon judging is time-consuming and repetitive:
 
 ---
 
-### 3. Vector-Based Team Matching
+### 4. Vector-Based Team Matching
 
 **What it does:** Uses semantic similarity to recommend teams that match a participant's skills and interests.
 
@@ -188,11 +216,12 @@ const embedding = await openai.embeddings.create({
 
 | Feature | API Calls | Cost |
 |---------|-----------|------|
+| Project Suggestions | 100 generations | $5 |
 | Project Summaries | 100 | $1-2 |
 | Feedback Synthesis | 100 | $3-5 |
 | Team Embeddings | 50 teams | $0.001 |
 | Participant Embeddings | 200 people | $0.004 |
-| **Total** | | **$5-10** |
+| **Total** | | **$10-15** |
 
 **Compared to manual work:**
 - Judge time saved: 5-8 hours ($500-800 value at $100/hr)
@@ -352,6 +381,7 @@ db.teams.aggregate([{
 
 ## Next Steps
 
+- [Generate project ideas with the AI Wizard](/docs/ai/project-suggestions-wizard)
 - [Set up Vector Search indexes](/docs/ai/vector-search)
 - [Configure project summary generation](/docs/ai/project-summaries)
 - [Enable feedback synthesis](/docs/ai/feedback-synthesis)

@@ -18,6 +18,8 @@ Event management provides complete lifecycle control from creation through archi
 
 ## Event List View
 
+![Events Management table showing all events with status, capacity, type, and actions](/img/screenshots/admin-events-table.png)
+
 ### All Events Table
 
 **Filterable list:**
@@ -46,6 +48,10 @@ Event management provides complete lifecycle control from creation through archi
 ---
 
 ## Creating Events
+
+The event editor uses a tabbed interface with sections for basic info, judging, prizes, results, registrations, and the landing page.
+
+![Event edit form showing Basic Information and Dates & Time sections](/img/screenshots/admin-edit-event.png)
 
 ### Step 1: Basic Information
 
@@ -225,6 +231,12 @@ Registration deadline  ≤  Event start  ≤  Submission deadline  ≤  Event en
 ---
 
 ### Step 5: Branding
+
+The landing page template editor provides a visual builder with section controls, live preview, and color/typography customization.
+
+![Landing Page Templates gallery showing built-in template options](/img/screenshots/admin-templates-summary.png)
+
+![Template editor with live preview, section navigation, and color controls](/img/screenshots/admin-templates-detail.png)
 
 **Visual identity:**
 ```tsx
@@ -451,6 +463,18 @@ Reason: [text input]
 ---
 
 ## Participant Management
+
+### Teams Table
+
+The Teams Management view shows all hackathon teams with their leader, members, skills needed, and status.
+
+![Teams Management table showing team names, events, leaders, members, and status](/img/screenshots/admin-team-table.png)
+
+### Projects Table
+
+The Projects Management view lists all submitted projects with their category, status, technologies, and links.
+
+![Projects Management table showing project names, categories, status, and technologies](/img/screenshots/admin-projects-table.png)
 
 ### Participant List
 

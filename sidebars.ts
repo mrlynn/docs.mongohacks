@@ -30,6 +30,7 @@ const sidebars: SidebarsConfig = {
       label: 'AI Features',
       items: [
         'ai/overview',
+        'ai/project-suggestions-wizard',
         'ai/project-summaries',
         'ai/feedback-synthesis',
         'ai/team-matching',

@@ -116,6 +116,8 @@ MongoHacks Team
 
 ## Judge List
 
+![Judges Management page showing event assignment, judge table with names, emails, and assigned projects](/img/screenshots/admin-judges-table.png)
+
 ### All Judges View
 
 **Judge roster:**
